@@ -10,8 +10,6 @@
   - type: Sprite
     sprite: _HL/Objects/BorgArmor/physarmor/defaultarmor.rsi
     state: icon
-    layers:
-      - map: [ "HEAD" ]
   - type: Clothing
     sprite: _HL/Objects/BorgArmor/physarmor/defaultarmor.rsi
     clothingVisuals:
