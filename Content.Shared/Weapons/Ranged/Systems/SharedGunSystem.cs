@@ -461,8 +461,8 @@ public abstract partial class SharedGunSystem : EntitySystem
         projectile.Weapon = gunUid;
 
         // Set the projectile rotation to match the direction it's traveling
-        // This ensures projectiles visually point toward their target
-        var directionAngle = direction.ToAngle();
+        // Using FromWorldVec to match the coordinate system convention (adds PI/2)
+        var directionAngle = Angle.FromWorldVec(direction);
         TransformSystem.SetWorldRotation(uid, directionAngle + projectile.Angle);
     }
 
